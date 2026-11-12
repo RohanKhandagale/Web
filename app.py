@@ -65,7 +65,7 @@ def contact():
         flash("Please enter a valid phone number.", "error")
         return redirect(url_for("home") + "#contact")
 
-    if email and not re.fullmatch(r"[^@\\s]+@[^@\\s]+\\.[^@\\s]+", email):
+    if email and not re.fullmatch(r"[^@\s]+@[^@\s]+\.[^@\s]+", email):
         flash("Please enter a valid email address.", "error")
         return redirect(url_for("home") + "#contact")
 
